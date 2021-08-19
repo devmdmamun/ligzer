@@ -1,0 +1,32 @@
+.search {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+}
+.searchInp {
+  width: 100%;
+  max-width: 800px;
+  height: 80%;
+  border: none;
+  border-bottom: 2px solid #c7c7c7;
+  background-color: transparent;
+  font-size: 30px;
+  margin: auto;
+  color: white;
+  outline: none;
+  padding: 10px;
+}
+@media (max-width: 899px) {
+  .search {
+    height: 60px;
+  }
+  .searchInp {
+    font-size: 20px;
+    border: none;
+    width: 90%;
+  }
+}

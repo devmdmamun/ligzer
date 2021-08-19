@@ -3,7 +3,7 @@ import BigNav from "./BigNav";
 import SmNav from "./SmNav";
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const smallScreen = 768;
+  const smallScreen = 800;
   useEffect(() => {
     const handledevices = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handledevices);
@@ -11,7 +11,7 @@ const Navbar = () => {
       window.removeEventListener("resize", handledevices);
     };
   }, []);
-  return <div>{width < smallScreen ? <SmNav /> : <BigNav />}</div>;
+  return <>{width < smallScreen ? <SmNav /> : <BigNav />}</>;
 };
 
 export default Navbar;

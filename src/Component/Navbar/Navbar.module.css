@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 .navbar {
   width: 100%;
   height: 100px;
-  background-color: #2b2d42;
+  background-color: #161616; /* new theme color with #2b2d42 */
 }
+
 .nav {
   max-width: 1200px;
   height: 100%;
@@ -13,20 +15,51 @@
   margin: auto;
   padding: 10px;
 }
+
 a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #c7c7c7;
+  /* border: 1px solid #c7c7c7; */
 }
+
 .logo {
   font-size: 40px;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
-.mainLink a,
-.sideLink a {
-  padding: 5px;
-  margin: 5px;
+.logo small {
+  color: #c7c7c7;
+  font-size: 15px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03px;
+}
+/* .logoSmallTxt {
+  display: flex;
+  flex-flow: column;
+  color: #c7c7c7;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-bottom: 10px; commented line
+  letter-spacing: 0.03px;
+} */
+.logo:hover {
+  color: black;
+}
+.mainLink {
+  width: 350px;
+  text-align: center;
+}
+
+.mainLink,
+.sideLink,
+.logo {
+  /* border: 1px solid #c7c7c7; */
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navbarSmMain {
@@ -40,28 +73,33 @@ a {
   transform: translateX(-50%);
   height: 50px;
 }
+
 .mainLinkSm {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 70%;
 }
+
 .cngMainLink {
   width: 60px;
   position: relative;
 }
+
 .cngMainLink .icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .mainLinkSm,
 .cngMainLink {
-  background-color: #2b2d42;
+  background-color: #2b2d42; /* previous theme color with white */
   height: 100%;
   border-radius: 5px;
 }
+
 .linkBox {
   display: inline-flex;
   align-items: center;
@@ -70,11 +108,28 @@ a {
   justify-content: center;
   text-align: center;
 }
+
 .icon {
   font-size: 20px;
   color: #c7c7c7;
   margin: auto;
+  /* border: 1px solid #c7c7c7; */
 }
+
 .linkTxt {
   font-size: 10px;
+}
+.linkTxtBg {
+  font-size: 15px;
+}
+.sideLink .icon {
+  margin: 5px;
+  padding: 5px;
+  font-size: 35px;
+  cursor: pointer;
+}
+@media (max-width: 1210px) {
+  .nav {
+    margin: 0 10px;
+  }
 }
