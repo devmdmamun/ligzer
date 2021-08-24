@@ -6,6 +6,7 @@ const Search = () => {
         className={classes.searchInp}
         type="text"
         placeholder="Search your favorite anime..."
+        autoFocus
       />
     </div>
   );

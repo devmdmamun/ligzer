@@ -8,7 +8,6 @@ const BigNav = () => {
 
   const handleSearchClick = () => {
     setShow(!show);
-    console.log("you have click the search button");
   };
 
   return (

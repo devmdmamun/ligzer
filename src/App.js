@@ -1,12 +1,10 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./Component/Icons";
-import Spring from "./Pages/Spring";
-import Summer from "./Pages/Summer";
-import Winter from "./Pages/Winter";
-import Fall from "./Pages/Fall";
 import Favorite from "./Pages/Favorite";
 import Watching from "./Watching";
 import Navbar from "./Component/Navbar/Navbar";
+import Upload from "./upload/Upload";
+import Page from "./Pages/Page";
 
 function App() {
   return (
@@ -16,16 +14,16 @@ function App() {
         <div className="content">
           <Switch>
             <Route path={["/home", "/", "/winter"]} exact>
-              <Winter />
+              <Page />
             </Route>
             <Route path="/spring" exect>
-              <Spring />
+              <Page />
             </Route>
             <Route path="/summer" exact>
-              <Summer />
+              <Page />
             </Route>
             <Route path="/fall" exect>
-              <Fall />
+              <Page />
             </Route>
             <Route path="/favorite" exect>
               <Favorite />
