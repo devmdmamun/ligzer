@@ -13,7 +13,11 @@ const Page = () => {
         </div>
       )}
       {error && <div>{error}</div>}
-      {data && <Cards data={data} />}
+      {data && (
+        <div className="animeContainer">
+          <Cards data={data} />
+        </div>
+      )}
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Cards = ({ data }) => {
           </div>
           <div className={classes.descWrapper}>
             <div className={classes.toWatch}>
-              <h3>Click here for more info{item.id}</h3>
+              <h3>Click here for more info</h3>
               <FontAwesomeIcon icon="info-circle" className={classes.icon} />
             </div>
             <div className={classes.description}>{item.description}</div>
