@@ -3,7 +3,6 @@ import classes from "./Card.module.css";
 const Cards = ({ data }) => {
   return (
     <>
-      {console.log(typeof data)}
       {data.map((item) => (
         <div key={item.id} className={classes.cardWrapper}>
           <div className={classes.imgWrapper}>

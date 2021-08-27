@@ -1,10 +1,8 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./Component/Icons";
-import Favorite from "./Pages/Favorite";
-import Watching from "./Watching";
 import Navbar from "./Component/Navbar/Navbar";
-import Upload from "./upload/Upload";
 import Page from "./Pages/Page";
+import Search from "./Component/Navbar/Search";
 
 function App() {
   return (
@@ -25,11 +23,8 @@ function App() {
             <Route path="/fall" exect>
               <Page />
             </Route>
-            <Route path="/favorite" exect>
-              <Favorite />
-            </Route>
-            <Route path="/watching" exect>
-              <Watching />
+            <Route path="/search" exect>
+              <Search />
             </Route>
           </Switch>
         </div>

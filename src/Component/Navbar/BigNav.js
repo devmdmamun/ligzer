@@ -1,15 +1,7 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./Navbar.module.css";
-import { useState } from "react";
-import Search from "./Search";
 const BigNav = () => {
-  const [show, setShow] = useState(false);
-
-  const handleSearchClick = () => {
-    setShow(!show);
-  };
-
   return (
     <>
       <header className={classes.navbar}>
@@ -44,11 +36,9 @@ const BigNav = () => {
             <Link to="/favorite">
               <FontAwesomeIcon icon="heart" className={classes.icon} />
             </Link>
-            <FontAwesomeIcon
-              icon="search"
-              className={classes.icon}
-              onClick={handleSearchClick}
-            />
+            <Link to="search">
+              <FontAwesomeIcon icon="search" className={classes.icon} />
+            </Link>
             <FontAwesomeIcon icon="bars" className={classes.icon} />
             {/* 
           <Link to="/favorite">
@@ -63,7 +53,6 @@ const BigNav = () => {
           </div>
         </nav>
       </header>
-      {show ? <Search /> : null}
     </>
   );
 };

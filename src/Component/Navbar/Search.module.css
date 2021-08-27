@@ -1,3 +1,6 @@
+.container {
+  min-height: 100vh;
+}
 .search {
   height: 90px;
   width: 100%;
@@ -5,7 +8,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  position: fixed;
+  z-index: 3;
 }
 .searchInp {
   width: 100%;
@@ -19,6 +22,11 @@
   color: white;
   outline: none;
   padding: 10px;
+}
+.result {
+  padding-top: 30px;
+  max-width: 100%;
+  margin: 0 1vw;
 }
 @media (max-width: 899px) {
   .search {
