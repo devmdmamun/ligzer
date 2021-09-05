@@ -1,10 +1,24 @@
 import useFetch from "../Component/useFetch";
 import Loading from "../Component/Loading";
 import Cards from "../Component/Cards";
+import Error from "../Component/Error";
+import { useHistory, useParams } from "react-router-dom";
 const Page = () => {
+  const { pageId } = useParams();
   const { data, error, isLoading } = useFetch(
     "https://ligzer-anime-beta-default-rtdb.firebaseio.com/animedata.json"
   );
+  let history = useHistory();
+  console.log(pageId);
+  if (pageId === undefined) {
+    history.push("/summer-2021");
+  }
+  let pageData = [];
+  for (let id in data) {
+    if (data[id].pageId === pageId) {
+      pageData.push(data[id]);
+    }
+  }
   return (
     <div className="container">
       {isLoading && (
@@ -12,10 +26,14 @@ const Page = () => {
           <Loading />
         </div>
       )}
-      {error && <div>{error}</div>}
+      {error && (
+        <div>
+          <Error />
+        </div>
+      )}
       {data && (
         <div className="animeContainer">
-          <Cards data={data} />
+          <Cards data={pageData} />
         </div>
       )}
     </div>

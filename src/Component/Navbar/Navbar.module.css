@@ -2,6 +2,9 @@
   width: 100%;
   height: 70px;
   background-color: #161616; /* new theme color with #2b2d42 */
+  box-shadow: 0px 5px 30px black;
+  position: relative;
+  z-index: 5;
 }
 
 .nav {
@@ -20,31 +23,19 @@ a {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #c7c7c7;
-  /* border: 1px solid #c7c7c7; */
 }
 
 .logo {
   font-size: 40px;
   letter-spacing: -1px;
 }
-.logo small {
+.logo small,
+.smLogo small {
   color: #c7c7c7;
   font-size: 15px;
   margin-left: 5px;
   margin-bottom: 10px;
   letter-spacing: 0.03px;
-}
-/* .logoSmallTxt {
-  display: flex;
-  flex-flow: column;
-  color: #c7c7c7;
-  font-size: 16px;
-  margin-left: 5px;
-  margin-bottom: 10px; commented line
-  letter-spacing: 0.03px;
-} */
-.logo:hover {
-  color: black;
 }
 .mainLink {
   width: 350px;
@@ -54,7 +45,6 @@ a {
 .mainLink,
 .sideLink,
 .logo {
-  /* border: 1px solid #c7c7c7; */
   height: 60px;
   display: flex;
   justify-content: space-around;
@@ -95,7 +85,7 @@ a {
 
 .mainLinkSm,
 .cngMainLink {
-  background-color: #2b2d42; /* previous theme color with white */
+  background-color: #343542; /* previous theme color with white */
   height: 100%;
   border-radius: 5px;
 }
@@ -113,7 +103,6 @@ a {
   font-size: 20px;
   color: #c7c7c7;
   margin: auto;
-  /* border: 1px solid #c7c7c7; */
 }
 
 .linkTxt {
@@ -127,4 +116,30 @@ a {
   padding: 5px;
   font-size: 35px;
   cursor: pointer;
+}
+.navbarSmHeader {
+  height: 60px;
+  background-color: #1d1d1d;
+  box-shadow: 0px 5px 20px black;
+  position: relative;
+  z-index: 0;
+}
+.headerWrapperSm {
+  width: 90%;
+  color: #c7c7c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.smLogo {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  height: 60px;
+  width: 170px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

@@ -23,10 +23,7 @@ const Cards = ({ data }) => {
                 <p></p>
               </div>
               <div>
-                <FontAwesomeIcon icon="thumbs-down" />
-              </div>
-              <div>
-                <FontAwesomeIcon icon="heart" />
+                <FontAwesomeIcon icon="comment-alt" />
               </div>
               <div>
                 <FontAwesomeIcon icon="share" />

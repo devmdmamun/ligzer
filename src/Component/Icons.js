@@ -2,7 +2,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
-  faCog,
   faHeart,
   faLeaf,
   faSearch,
@@ -12,9 +11,9 @@ import {
   faTv,
   faThumbsUp,
   faShare,
-  faThumbsDown,
   faGlobe,
   faInfoCircle,
+  faCommentAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -27,12 +26,11 @@ library.add(
   faSearch,
   faHeart,
   faTv,
-  faCog,
   faThumbsUp,
-  faThumbsDown,
   faShare,
   faGlobe,
   faYoutube,
   faTwitter,
-  faInfoCircle
+  faInfoCircle,
+  faCommentAlt
 );

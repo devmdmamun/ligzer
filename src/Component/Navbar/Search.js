@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cards from "../Cards";
+import Error from "../Error";
 import Loading from "../Loading";
 import useFetch from "../useFetch";
 import classes from "./Search.module.css";
@@ -45,7 +46,11 @@ const Search = () => {
             <Loading />
           </div>
         )}
-        {error && <div>{error}</div>}
+        {error && (
+          <div>
+            <Error />
+          </div>
+        )}
         <div className={classes.result}>
           <div className="animeContainer">
             {result && <Cards data={result} />}

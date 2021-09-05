@@ -11,20 +11,11 @@ function App() {
         <Navbar></Navbar>
         <div className="content">
           <Switch>
-            <Route path={["/home", "/", "/winter"]} exact>
-              <Page />
-            </Route>
-            <Route path="/spring" exect>
-              <Page />
-            </Route>
-            <Route path="/summer" exact>
-              <Page />
-            </Route>
-            <Route path="/fall" exect>
-              <Page />
-            </Route>
             <Route path="/search" exect>
               <Search />
+            </Route>
+            <Route path={["/:pageId", "/"]}>
+              <Page />
             </Route>
           </Switch>
         </div>
