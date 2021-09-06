@@ -14,7 +14,7 @@ function App() {
             <Route path="/search" exect>
               <Search />
             </Route>
-            <Route path={["/:pageId", "/"]}>
+            <Route path="/anime/:pageId">
               <Page />
             </Route>
           </Switch>

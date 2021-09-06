@@ -7,7 +7,7 @@ const SmNav = () => {
       <header className={classes.navbarSmHeader}>
         <div className={classes.headerWrapperSm}>
           <div className={classes.smLogo}>
-            <Link to="/">Ligzer</Link>
+            <Link to="/anime/summer-2021">Ligzer</Link>
             <small>anime</small>
           </div>
           <div className={classes.searchSm}>
@@ -19,19 +19,19 @@ const SmNav = () => {
       </header>
       <nav className={classes.navbarSmMain}>
         <div className={classes.mainLinkSm}>
-          <Link className={classes.linkBox} to="/winter-2021">
+          <Link className={classes.linkBox} to="/anime/winter-2021">
             <FontAwesomeIcon icon="snowflake" className={classes.icon} />
             <p className={classes.linkTxt}>Winter</p>
           </Link>
-          <Link className={classes.linkBox} to="/spring-2021">
+          <Link className={classes.linkBox} to="/anime/spring-2021">
             <FontAwesomeIcon icon="seedling" className={classes.icon} />
             <p className={classes.linkTxt}>Spring</p>
           </Link>
-          <Link className={classes.linkBox} to="/summer-2021">
+          <Link className={classes.linkBox} to="/anime/summer-2021">
             <FontAwesomeIcon icon="sun" className={classes.icon} />
             <p className={classes.linkTxt}>Summer</p>
           </Link>
-          <Link className={classes.linkBox} to="/fall-2021">
+          <Link className={classes.linkBox} to="/anime/fall-2021">
             <FontAwesomeIcon icon="leaf" className={classes.icon} />
             <p className={classes.linkTxt}>Fall</p>
           </Link>
