@@ -74,6 +74,14 @@ body {
   width: 270px;
   height: auto;
 }
+.basicMassage {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: #c7c7c7;
+  font-weight: bold;
+  margin-top: 20px;
+}
 @media (max-width: 1350px) {
   .animeContainer {
     grid-column-gap: 30px;

@@ -3,6 +3,7 @@ import "./Component/Icons";
 import Navbar from "./Component/Navbar/Navbar";
 import Page from "./Pages/Page";
 import Search from "./Component/Navbar/Search";
+import Favorite from "./Pages/Favorite";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <Switch>
             <Route path="/search" exect>
               <Search />
+            </Route>
+            <Route path="/favorite" exect>
+              <Favorite />
             </Route>
             <Route path="/anime/:pageId">
               <Page />

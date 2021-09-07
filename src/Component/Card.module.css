@@ -87,10 +87,17 @@
   background: #353535;
   border-radius: 5px;
 }
-.icon {
-  font-size: 20px;
+.icon,
+.activeIconHeart {
+  cursor: pointer;
+  font-size: 18px;
   margin-left: 5px;
 }
+
+.activeIconHeart {
+  color: #bd1f1f;
+}
+
 @media (max-width: 400px) {
   .imgWrapper {
     max-width: 160px;
