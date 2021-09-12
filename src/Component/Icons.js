@@ -13,8 +13,9 @@ import {
   faShare,
   faGlobe,
   faInfoCircle,
-  faCommentAlt,
   faHeartbeat,
+  faBookmark,
+  faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -33,6 +34,7 @@ library.add(
   faYoutube,
   faTwitter,
   faInfoCircle,
-  faCommentAlt,
-  faHeartbeat
+  faHeartbeat,
+  faBookmark,
+  faExternalLinkAlt
 );

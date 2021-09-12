@@ -15,7 +15,7 @@ function App() {
             <Route path="/search" exect>
               <Search />
             </Route>
-            <Route path="/favorite" exect>
+            <Route path="/bookmarked" exect>
               <Favorite />
             </Route>
             <Route path="/anime/:pageId">

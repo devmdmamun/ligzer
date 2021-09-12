@@ -13,13 +13,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .content {
-  background-color: #282828;
+  background-color: #3a3939;
 }
 .container {
   max-width: 100%;
   margin: 0 1vw;
   min-height: 100vh;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
   padding-bottom: 70px;
 }
 .animeContainer {

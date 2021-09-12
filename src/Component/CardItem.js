@@ -14,6 +14,7 @@ const CardItem = (props) => {
         image: props.image,
         description: props.description,
         title: props.title,
+        studio: props.studio,
       });
     }
   }
@@ -28,8 +29,16 @@ const CardItem = (props) => {
         </div>
         <div className={classes.descWrapper}>
           <div className={classes.toWatch}>
-            <h3>Click here for more info</h3>
-            <FontAwesomeIcon icon="info-circle" className={classes.icon} />
+            <div>
+              <small> Studio </small>
+              <h3>{props.studio}</h3>
+            </div>
+            <div className={classes.externaliconDiv}>
+              <FontAwesomeIcon
+                icon="external-link-alt"
+                className={classes.icon}
+              />
+            </div>
           </div>
           <div className={classes.description}>{props.description}</div>
           <div className={classes.social}>
@@ -40,9 +49,9 @@ const CardItem = (props) => {
               <FontAwesomeIcon
                 onClick={toggleFavoriteStatusHandler}
                 className={
-                  itemIsFavorite ? classes.activeIconHeart : classes.icon
+                  itemIsFavorite ? classes.activeIconBookmark : classes.icon
                 }
-                icon={itemIsFavorite ? "heart" : "heartbeat"}
+                icon="bookmark"
               />
             </div>
             <div>

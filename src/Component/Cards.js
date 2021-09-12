@@ -9,6 +9,7 @@ const Cards = ({ data }) => {
           image={item.image}
           title={item.title}
           description={item.description}
+          studio={item.studio}
         />
       ))}
     </>

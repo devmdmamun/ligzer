@@ -61,9 +61,15 @@
   height: 25%;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+.toWatch div small {
+  font-weight: bold;
+}
+.externaliconDiv {
+  width: 10%;
 }
 .social {
   display: flex;
@@ -87,15 +93,24 @@
   background: #353535;
   border-radius: 5px;
 }
+.social div {
+  width: 30px;
+}
 .icon,
-.activeIconHeart {
+.activeIconBookmark {
   cursor: pointer;
   font-size: 18px;
   margin-left: 5px;
+  color: #b9b9b9;
+  transition: 0.2s;
 }
-
-.activeIconHeart {
-  color: #bd1f1f;
+.icon:hover,
+.activeIconBookmark:hover {
+  font-size: 20px;
+  color: white;
+}
+.activeIconBookmark {
+  color: white;
 }
 
 @media (max-width: 400px) {
