@@ -2,6 +2,7 @@ import useFetch from "../Component/useFetch";
 import Loading from "../Component/Loading";
 import Cards from "../Component/Cards";
 import Error from "../Component/Error";
+import NotFound from "../Component/NotFound";
 import { useParams } from "react-router-dom";
 const Page = () => {
   const { pageId } = useParams();
@@ -14,6 +15,17 @@ const Page = () => {
       pageData.push(data[id]);
     }
   }
+  let content;
+  if (pageData.length !== 0) {
+    content = (
+      <div className="animeContainer">
+        <Cards data={pageData} />
+      </div>
+    );
+  } else {
+    content = <NotFound />;
+  }
+  console.log(pageData);
   return (
     <div className="container">
       {isLoading && (
@@ -26,11 +38,7 @@ const Page = () => {
           <Error />
         </div>
       )}
-      {data && (
-        <div className="animeContainer">
-          <Cards data={pageData} />
-        </div>
-      )}
+      {data && content}
     </div>
   );
 };
