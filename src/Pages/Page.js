@@ -25,7 +25,6 @@ const Page = () => {
   } else {
     content = <NotFound />;
   }
-  console.log(pageData);
   return (
     <div className="container">
       {isLoading && (
