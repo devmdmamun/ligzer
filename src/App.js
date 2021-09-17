@@ -5,6 +5,7 @@ import Page from "./Pages/Page";
 import Search from "./Component/Navbar/Search";
 import Favorite from "./Pages/Favorite";
 import NotFound from "./Component/NotFound";
+import About from "./Pages/About";
 
 function App() {
   return (
@@ -13,13 +14,16 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path="/search" exect>
+            <Route path="/about" exact>
+              <About />
+            </Route>
+            <Route path="/search" exact>
               <Search />
             </Route>
-            <Route path="/bookmarked" exect>
+            <Route path="/bookmarked" exact>
               <Favorite />
             </Route>
-            <Route path="/anime/:pageId">
+            <Route path="/anime/:pageId" exact>
               <Page />
             </Route>
             <Route path="*">

@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./Navbar.module.css";
+import { useState, useRef, useEffect } from "react";
+import Dropdown from "./DropDown/Dropdown";
 const Navbar = () => {
+  let dropRef = useRef();
+
+  const [dropDown, setDropDown] = useState(false);
+  let insideHandler = () => {
+    setDropDown(false);
+  };
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!dropRef.current.contains(e.target)) {
+        setDropDown(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   return (
     <>
       <header className={classes.navbar}>
@@ -32,9 +53,17 @@ const Navbar = () => {
             <Link to="/search">
               <FontAwesomeIcon icon="search" className={classes.icon} />
             </Link>
-            <Link to="/bookmarked">
-              <FontAwesomeIcon icon="bookmark" className={classes.icon} />
-            </Link>
+
+            <div ref={dropRef}>
+              <FontAwesomeIcon
+                icon="bars"
+                className={classes.icon}
+                onClick={() => {
+                  setDropDown(!dropDown);
+                }}
+              />
+              {dropDown && <Dropdown hideDd={insideHandler} />}
+            </div>
           </div>
         </nav>
       </header>

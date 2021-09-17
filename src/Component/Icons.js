@@ -16,6 +16,7 @@ import {
   faHeartbeat,
   faBookmark,
   faExternalLinkAlt,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -36,5 +37,6 @@ library.add(
   faInfoCircle,
   faHeartbeat,
   faBookmark,
-  faExternalLinkAlt
+  faExternalLinkAlt,
+  faCode
 );

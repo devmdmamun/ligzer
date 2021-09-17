@@ -33,12 +33,12 @@ const CardItem = (props) => {
               <small> Studio </small>
               <h3>{props.studio}</h3>
             </div>
-            <div className={classes.externaliconDiv}>
+            {/* <div className={classes.externaliconDiv}>
               <FontAwesomeIcon
                 icon="external-link-alt"
                 className={classes.icon}
               />
-            </div>
+            </div> */}
           </div>
           <div className={classes.description}>{props.description}</div>
           <div className={classes.social}>

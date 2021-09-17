@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .content {
-  background-color: #3a3939;
+  background-color: #272727;
 }
 .container {
   max-width: 100%;
@@ -23,6 +23,54 @@ body {
   padding-bottom: 50px;
   padding-bottom: 70px;
 }
+.main-panel {
+  color: #dbdbdb;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-panel .left-panel h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.left-panel {
+  width: 50%;
+}
+.left-panel p {
+  color: #dbdbdb;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+.left-panel a {
+  color: white;
+}
+.left-panel button {
+  background-color: #141414;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 7px 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 0px 2px white;
+}
+
+.left-panel button:hover {
+  background-color: black;
+}
+
+.right-panel .img-wrapper {
+  max-width: 300px;
+}
+.right-panel img {
+  width: 100%;
+}
+
 .animeContainer {
   display: grid;
   grid-column-gap: 30px;
@@ -97,6 +145,17 @@ body {
   .animeContainer {
     grid-row-gap: 20px;
     grid-template-columns: repeat(1, minmax(430px, 600px));
+  }
+}
+@media (max-width: 700px) {
+  .main-panel {
+    justify-content: center;
+  }
+  .left-panel {
+    width: 90%;
+  }
+  .right-panel {
+    display: none;
   }
 }
 @media (max-width: 450px) {
